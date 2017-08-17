@@ -45,6 +45,10 @@
 
       setInterval(this.handleNext, this.interval)
     },
+    updated () {
+      this.total = this.$children.length
+      this.handleToggle()
+    },
     methods: {
       handlePrev () {
         if (this.now > 0) {

@@ -1,7 +1,7 @@
 <template>
   <div class="demo">
     <slick-slide :interval="5000">
-      <slick-slide-item v-for="index in 4" :key="index">
+      <slick-slide-item v-for="index in total" :key="index">
         <div class="demo-container">{{ index }}</div>
       </slick-slide-item>
     </slick-slide>
@@ -10,7 +10,16 @@
 
 <script>
   export default {
-
+    data () {
+      return {
+        total: 0
+      }
+    },
+    created () {
+      setTimeout(_ => {
+        this.total = 4
+      })
+    }
   }
 </script>
 

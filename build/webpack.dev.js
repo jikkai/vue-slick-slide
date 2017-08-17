@@ -1,5 +1,7 @@
 const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+const config = require('./config')
 const base = require('./webpack.base')
 
 base.entry = { client: './example/main.js' }
