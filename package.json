@@ -1,6 +1,6 @@
 {
   "name": "vue-slick-slide",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Slide component for Vue.js",
   "main": "lib/vue-slick-slide.js",
   "scripts": {
