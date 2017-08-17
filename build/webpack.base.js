@@ -11,7 +11,9 @@ module.exports = {
   output: {
     path: path.join(__dirname, '../lib'),
     filename: '[name].js',
-    publicPath: './'
+    publicPath: './',
+    libraryTarget: 'umd',
+    library: 'SlickSlide'
   },
   resolve: {
     extensions: ['.js', '.vue', '.css', '.json'],
