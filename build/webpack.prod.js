@@ -31,19 +31,15 @@ base.module.rules.push({
   loader: 'vue-loader',
   options: {
     loaders: {
+      css: ExtractTextPlugin.extract({
+        use: [{ loader: 'css-loader?minimize=true' }, 'postcss-loader'],
+        fallback: 'style-loader'
+      }),
       js: 'happypack/loader?id=babel'
     },
     extractCSS: true,
     preserveWhitespace: false
   }
-})
-
-base.module.rules.push({
-  test: /\.css$/,
-  loader: ExtractTextPlugin.extract({
-    use: [{ loader: 'css-loader?minimize=true' }, 'postcss-loader'],
-    fallback: 'style-loader'
-  })
 })
 
 module.exports = base
