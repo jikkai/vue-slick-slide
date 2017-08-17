@@ -30,7 +30,8 @@
     data () {
       return {
         now: 0,
-        total: 0
+        total: 0,
+        timer: 0
       }
     },
     props: {
@@ -43,11 +44,14 @@
       this.total = this.$children.length
       this.handleToggle()
 
-      setInterval(this.handleNext, this.interval)
+      this.timer = setInterval(this.handleNext, this.interval)
     },
     updated () {
       this.total = this.$children.length
       this.handleToggle()
+
+      clearInterval(this.timer)
+      this.timer = setInterval(this.handleNext, this.interval)
     },
     methods: {
       handlePrev () {
