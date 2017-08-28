@@ -95,11 +95,11 @@
       size: 100%;
       overflow: hidden;
       user-select: none;
-      &:hover a {
+      &:hover .v-slide__button a {
         display: block;
       }
       @when single {
-        &:hover a {
+        :hover .v-slide__button a {
           display: none;
         }
       }
