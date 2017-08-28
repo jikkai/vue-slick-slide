@@ -99,7 +99,7 @@
         display: block;
       }
       @when single {
-        :hover .v-slide__button a {
+        &:hover .v-slide__button a {
           display: none;
         }
       }

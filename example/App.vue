@@ -17,7 +17,7 @@
     },
     created () {
       setTimeout(_ => {
-        this.total = 4
+        this.total = 1
       })
     }
   }
