@@ -1,5 +1,5 @@
 <template>
-  <div class="v-slide">
+  <div class="v-slide" :class="{ 'is-single': total <= 1 }">
     <div class="v-slide__container">
       <slot :now="now"></slot>
     </div>
@@ -13,7 +13,7 @@
       </a>
     </div>
 
-    <div class="v-slide__pager">
+    <div class="v-slide__pager" v-if="total > 1">
       <a
         v-for="(num, index) in total"
         :key="num"
@@ -94,8 +94,14 @@
       position: relative;
       size: 100%;
       overflow: hidden;
+      user-select: none;
       &:hover a {
         display: block;
+      }
+      @when single {
+        &:hover a {
+          display: none;
+        }
       }
 
       @d container {
@@ -120,6 +126,7 @@
 
           & span {
             display: block;
+            text-shadow: 0px 1px rgba(0, 0, 0, .3);
             transform: scaleY(2);
           }
         }
