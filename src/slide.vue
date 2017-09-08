@@ -146,7 +146,7 @@
 
       @d pager {
         position: absolute;
-        bottom: 15px;
+        bottom: 17px;
         right: 8px;
         display: flex;
 
