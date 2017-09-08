@@ -130,7 +130,7 @@
 
           & span {
             display: block;
-            text-shadow: 0px 1px rgba(200, 200, 200, .7);
+            text-shadow: 0px 1px rgba(0, 0, 0, .3);
             transform: scaleY(2);
           }
         }
@@ -153,7 +153,7 @@
         & a {
           size: 10px;
           margin-left: 8px;
-          background-color: rgba(0, 0, 0, .6);
+          background-color: rgba(200, 200, 200, .7);
           border-radius: 50%;
           display: block;
           transition: background-color .4s;
