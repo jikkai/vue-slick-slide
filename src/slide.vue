@@ -95,12 +95,14 @@
       size: 100%;
       overflow: hidden;
       user-select: none;
-      &:hover .v-slide__button a {
-        display: block;
+      &:hover .v-slide__button {
+        opacity: 1;
+        z-index: 1;
       }
       @when single {
         &:hover .v-slide__button a {
-          display: none;
+          opacity: 0;
+          z-index: -1;
         }
       }
 
@@ -113,6 +115,9 @@
         position: absolute;
         width: 100%;
         top: calc(50% - 23px);
+        opacity: 0;
+        z-index: -1;
+        transition: all .6s;
 
         & a {
           position: absolute;
@@ -122,7 +127,6 @@
           text-align: center;
           overflow: hidden;
           cursor: pointer;
-          display: none;
 
           & span {
             display: block;
@@ -142,16 +146,16 @@
 
       @d pager {
         position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background-color: rgba(0, 0, 0, .7);
+        bottom: 12px;
+        right: 12px;
         display: flex;
 
         & a {
-          height: 4px;
+          size: 10px;
+          margin-left: 8px;
+          background-color: rgba(0, 0, 0, .6);
+          border-radius: 50%;
           display: block;
-          flex: 1;
           transition: background-color .4s;
           cursor: pointer;
           &:hover {
