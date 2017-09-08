@@ -130,7 +130,7 @@
 
           & span {
             display: block;
-            text-shadow: 0px 1px rgba(0, 0, 0, .3);
+            text-shadow: 0px 1px rgba(200, 200, 200, .7);
             transform: scaleY(2);
           }
         }
@@ -146,8 +146,8 @@
 
       @d pager {
         position: absolute;
-        bottom: 12px;
-        right: 12px;
+        bottom: 15px;
+        right: 8px;
         display: flex;
 
         & a {
