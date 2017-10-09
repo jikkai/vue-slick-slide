@@ -29,7 +29,7 @@
     name: 'slick-slide',
     data () {
       return {
-        now: 0,
+        now: this.activeIndex,
         total: 0,
         timer: 0
       }
@@ -38,6 +38,10 @@
       interval: {
         type: Number,
         default: 3000
+      },
+      activeIndex: {
+        type: Number,
+        default: 0
       }
     },
     mounted () {
@@ -80,6 +84,7 @@
       },
 
       handleToggle () {
+        this.$emit('update:activeIndex', this.now)
         Array.from(this.$children).forEach(($slot, index) => {
           $slot.$set($slot, 'isShow', index === this.now)
         })

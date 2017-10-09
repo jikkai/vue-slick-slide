@@ -1,6 +1,6 @@
 <template>
   <div class="demo">
-    <slick-slide :interval="5000">
+    <slick-slide :activeIndex="1" :interval="5000">
       <slick-slide-item v-for="index in total" :key="index">
         <div class="demo-container">{{ index }}</div>
       </slick-slide-item>
